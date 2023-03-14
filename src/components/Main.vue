@@ -1,6 +1,6 @@
 <template>
     <main class="main">
-        <hero class="hero">
+        <section class="hero">
             <h1 class="hero__title">
                 <span>Start to take</span>  <br/> a change.
             </h1>
@@ -8,7 +8,7 @@
                 Instant, global, and cheap fees. <br/> What more could you asked for?
             </p>
             <div><Button/></div>
-        </hero>
+        </section>
         <section class="section section-first">
             <img class="section-first-img" src="src\components\images\Image1.png" alt="Transfer image">
             <h2 class="section-first-title">
@@ -34,7 +34,7 @@
             <img class="section-third-img" src="src\components\images\Image3.png" alt="Time image" >
             <div class="container__text">  
             <h1 class="section-third-title">
-                Time is <span>money.</span>
+                Time is <span>money.</span> 
             </h1>
             <p class="section-third-text">
                 Real-time transfer and payouts WORLDWIDE!
