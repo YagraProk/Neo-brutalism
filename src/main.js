@@ -5,8 +5,8 @@ import Pricing from './Pricing.vue'
 import Signup from './Signup.vue'
 
 
-createApp(App).mount('#app')
+// createApp(App).mount('#app')
 
-createApp(Pricing).mount('#Pricing')
+// createApp(Pricing).mount('#Pricing')
 
-createApp(Signup).mount('#Signup')
+// createApp(Signup).mount('#Signup')
