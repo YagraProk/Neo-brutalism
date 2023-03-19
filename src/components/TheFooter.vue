@@ -5,8 +5,8 @@
 <template>
   <footer class="footer">
     <div class="footer__inner">
-      <a href="index.html" class="logo">
-        <img src="src\components\images\Logo.png" alt="Logo">
+      <a href="/" class="logo">
+        <img src="@\assets\images\Logo.svg" alt="Logo">
       </a>
       <nav class="menu">
         <ul class="menu__list">
@@ -35,13 +35,13 @@
       </nav>
       <div class="contacts">
         <a class="contacts__in" href="#"> 
-            <img src="src\components\images\instagram.png" alt="Instagram link">
+            <img src="@\assets\images\instagram.svg" alt="Instagram link">
         </a>
         <a class="contacts__lin" href="#">
-            <img src="src\components\images\linkedin.png" alt="Linkedin link">
+            <img src="@\assets\images\linkedin.svg" alt="Linkedin link">
         </a>
         <a class="contacts__twit" href="#">
-            <img src="src\components\images\twitter.png" alt="Twitter link">
+            <img src="@\assets\images\twitter.svg" alt="Twitter link">
         </a>
       </div>
     </div>

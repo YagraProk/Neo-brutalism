@@ -4,9 +4,24 @@
   
 } 
 
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  font-style: normal;
+  src:  url('@\assets\fonts\Inter\Inter-Regular.woff2') format('woff2'),
+  url('@\assets\fonts\Inter\Inter-Regular.woff') format('woff');
+  }
+
+  @font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('@\assets\fonts\IBM Plex Mono\IBMPlexMono-Bold.woff2') format('woff2'),
+  url('@\assets\fonts\IBM Plex Mono\IBMPlexMono-Bold.woff') format('woff');
+  }
+
 body{
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   color:black;
@@ -15,7 +30,6 @@ body{
 
 h1 {
   font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
   font-size: 64px;
   line-height: 87%;
   color:black;

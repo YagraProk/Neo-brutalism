@@ -1,10 +1,10 @@
 <script setup>
-import Header from './components/Header.vue'
+import TheHeader from './TheHeader.vue'
 
 </script>
 
 <template>
-  <Header/>
+  <TheHeader/>
   <div class="main">
     <div class="container">
         <div class="container__inner">

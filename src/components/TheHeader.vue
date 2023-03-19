@@ -5,12 +5,12 @@ import Button from '/src/components/Button.vue'
 <template>
   <header class="header">
     <div class="header__inner">
-      <a href="index.html" class="logo">
-        <img src="src\components\images\Logo.png" alt="Logo">
+      <a href="/" class="logo">
+        <img src="@\assets\images\Logo.svg" alt="Logo">
       </a>
       <nav class="menu">
         <ul class="menu__list">
-          <li class="menu__list-item item1">Service<img src="src\components\images\Vector.png" alt="Arrow for submenu">
+          <li class="menu__list-item item1">Service<img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
               <ul class="drop">
 			                <li class="dropmenu"><a href="#">Text 1</a></li>
 			                <li class="dropmenu"><a href="#">Text 2</a></li>
@@ -18,14 +18,14 @@ import Button from '/src/components/Button.vue'
                       <li class="dropmenu"><a href="#">Text 4</a></li>
 			        </ul>
           </li>
-          <li class="menu__list-item item2">API <img src="src\components\images\Vector.png" alt="Arrow for submenu">
+          <li class="menu__list-item item2">API <img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
             <ul class="drop">
 			                <li class="dropmenu"><a href="#">Text 1</a></li>
 			                <li class="dropmenu"><a href="#">Text 2</a></li>
 			                <li class="dropmenu"><a href="#">Text 3</a></li>
                       <li class="dropmenu"><a href="#">Text 4</a></li>
 			        </ul></li>
-          <li class="menu__list-item item3">Company <img src="src\components\images\Vector.png" alt="Arrow for submenu">
+          <li class="menu__list-item item3">Company <img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
             <ul class="drop">
 			                <li class="dropmenu"><a href="#">Text 1</a></li>
 			                <li class="dropmenu"><a href="#">Text 2</a></li>

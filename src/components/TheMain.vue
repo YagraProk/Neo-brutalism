@@ -1,3 +1,7 @@
+<script setup>
+import Button from '@/components/Button.vue'
+</script>
+
 <template>
     <main class="main">
         <section class="hero">
@@ -10,7 +14,7 @@
             <div><Button/></div>
         </section>
         <section class="section section-first">
-            <img class="section-first-img" src="src\components\images\Image1.png" alt="Transfer image">
+            <img class="section-first-img" src="@\assets\images\Image1.png" alt="Transfer image">
             <h2 class="section-first-title">
                 Cheap fees <strong>transfer</strong>, <br/>no fixed cents.
             </h2>
@@ -25,13 +29,13 @@
             </p>
             <p class="section-second-text">
                 See supported countries
-                <img src="src\components\images\Vector-arrow.png" alt="Arrow to globe image">
+                <img src="@\assets\images\Vector-arrow.svg" alt="Arrow to globe image">
             </p>
             </div>
-            <img class="section-second-img" src="src\components\images\Image2.png" alt="Globe image" >
+            <img class="section-second-img" src="@\assets\images\Image2.png" alt="Globe image" >
         </section>
         <section class="section section-third">
-            <img class="section-third-img" src="src\components\images\Image3.png" alt="Time image" >
+            <img class="section-third-img" src="@\assets\images\Image3.png" alt="Time image" >
             <div class="container__text">  
             <h1 class="section-third-title">
                 Time is <span>money.</span> 
@@ -45,9 +49,7 @@
     </main>    
 </template>
   
-  <script setup>
-  import Button from '/src/components/Button.vue'
-  </script>
+ 
   
   <style scoped>
     .main{
