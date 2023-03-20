@@ -5,9 +5,9 @@ import TheFooter from '../components/TheFooter.vue'
 </script>
 
 <template>
-  <TheHeader/>
+  <!-- <TheHeader/> -->
   <TheMain/>
-  <TheFooter/>
+  <!-- <TheFooter/> -->
 </template>
 
 <style scoped>

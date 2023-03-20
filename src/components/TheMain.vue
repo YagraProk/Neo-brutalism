@@ -1,10 +1,18 @@
 <script setup>
 import Button from '@/components/Button.vue'
+import Hero from '@/components/Main/Hero.vue'
+import Cheap from '@/components/Main/Cheap.vue'
+import Available from '@/components/Main/Available.vue'
+import Worldwide from '@/components/Main/Worldwide.vue'
 </script>
 
 <template>
     <main class="main">
-        <section class="hero">
+      <Hero/>
+      <Cheap/>
+      <Available/>
+      <Worldwide/>
+        <!-- <section class="hero">
             <h1 class="hero__title">
                 <span>Start to take</span>  <br/> a change.
             </h1>
@@ -12,8 +20,8 @@ import Button from '@/components/Button.vue'
                 Instant, global, and cheap fees. <br/> What more could you asked for?
             </p>
             <div><Button/></div>
-        </section>
-        <section class="section section-first">
+        </section> -->
+        <!-- <section class="section section-first">
             <img class="section-first-img" src="@\assets\images\Image1.png" alt="Transfer image">
             <h2 class="section-first-title">
                 Cheap fees <strong>transfer</strong>, <br/>no fixed cents.
@@ -45,7 +53,7 @@ import Button from '@/components/Button.vue'
             </p>
             <div><Button/></div>
             </div>
-        </section>
+        </section> -->
     </main>    
 </template>
   
