@@ -1,48 +1,48 @@
 @import '@/assets/styles/fonts.css';
 
 * body{
-  /* font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  color:black; */
+  color:black;
   background-color: #FFF5EA;
 }
 
  h1 {
-  font-family: 'IBM Plex Mono';
-  font-size: 64px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 40px;
   line-height: 87%;
   color:black;
 }
 
 h2{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
 }
 
 p{
-  font-size: 64px;
+  font-size: 20px;
   line-height: 87%;
   
 }
-/*
-@media(max-width: 550px){
+
+@media(min-width: 767px){
   h1 {
-    font-size: 40px;
+    font-size: 64px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
-
-@media(max-width: 380px){
-  h1 {
+/*
+@media(min-width: 480px){
+  h2 {
     font-size: 40px;
   }
   
   p {
-    font-size: 20px;
+    font-size: 20px;64
   }
 } */
 

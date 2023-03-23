@@ -11,7 +11,7 @@ import Worldwide from '@/components/Main/Worldwide.vue'
       <Hero/>
       <Cheap/>
       <Available/>
-      <Worldwide/>
+      <!-- <Worldwide/> -->
         <!-- <section class="hero">
             <h1 class="hero__title">
                 <span>Start to take</span>  <br/> a change.
@@ -65,14 +65,14 @@ import Worldwide from '@/components/Main/Worldwide.vue'
         margin: 0 auto;
     }
 
-    .hero{
+    /* .hero{
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin-bottom: 175px;
-    }
+        margin-bottom: 175px; */
+    /* } */
 
-      .hero__title{
+    /*   .hero__title{
         -webkit-text-stroke: 1px Black;
         padding-bottom: 36px;
     }
@@ -276,7 +276,7 @@ import Worldwide from '@/components/Main/Worldwide.vue'
     .hero{
       margin-bottom: 50px;
     }
-}
+} */
 
   </style>
   

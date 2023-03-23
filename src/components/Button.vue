@@ -3,14 +3,14 @@
 </script>
 
 <template>
-<a class="item" href="Signup.html">Get started</a> 
+<a class="button" href="Signup.html">Get started</a> 
 </template>
 
 <style scoped>
 
 
 
-.item {
+.button {
   border: 2px solid black;
   padding: 10px;
   background-color: #9747FF;

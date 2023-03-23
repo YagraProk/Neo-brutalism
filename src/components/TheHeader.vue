@@ -1,175 +1,173 @@
 <script setup>
 import Button from '/src/components/Button.vue'
+import Burger from '@/assets/UI/Burger.vue'
 </script>
 
 <template>
   <header class="header">
-    <div class="header__inner">
+    <div class="header_inner">
       <a href="/" class="logo">
         <img src="@\assets\images\Logo.svg" alt="Logo">
       </a>
       <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item item1">Service<img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
-              <ul class="drop">
-			                <li class="dropmenu"><a href="#">Text 1</a></li>
-			                <li class="dropmenu"><a href="#">Text 2</a></li>
-			                <li class="dropmenu"><a href="#">Text 3</a></li>
-                      <li class="dropmenu"><a href="#">Text 4</a></li>
-			        </ul>
-          </li>
-          <li class="menu__list-item item2">API <img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
-            <ul class="drop">
-			                <li class="dropmenu"><a href="#">Text 1</a></li>
-			                <li class="dropmenu"><a href="#">Text 2</a></li>
-			                <li class="dropmenu"><a href="#">Text 3</a></li>
-                      <li class="dropmenu"><a href="#">Text 4</a></li>
-			        </ul></li>
-          <li class="menu__list-item item3">Company <img src="@\assets\images\Vector.svg" alt="Arrow for submenu">
-            <ul class="drop">
-			                <li class="dropmenu"><a href="#">Text 1</a></li>
-			                <li class="dropmenu"><a href="#">Text 2</a></li>
-			                <li class="dropmenu"><a href="#">Text 3</a></li>
-                      <li class="dropmenu"><a href="#">Text 4</a></li>
-			        </ul></li>
-            <li class="menu__list-item item4"><a href="Pricing.html">Pricing</a></li>
-            <li class="menu__list-item"><a href="#"><Button/></a></li>  
-          </ul>  
+        <ul class="menu_list">
+          <li class="item1">Service<img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
+          <li class="item2">API <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
+          <li class="item3">Company <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
+          <li class="item4"><a href="Pricing.html">Pricing</a></li>
+        </ul>
       </nav>
+      <div class="button"><a href="#"><Button/></a></div>
+      <div class="burger"><Burger/></div>
     </div>
   </header>
-  
 </template>
 
-
-
-<style scoped>
+<style lang="scss" scoped>
 
 .header {
-  margin: 60px 71px 80px 63px;
+  margin: 10px 10px 10px 10px;
+    &_inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: auto;
+      .logo{
+        cursor: default;
+          img{
+            width: 40px;
+            height: 40px;
+          }
+      }
+    }
 }
-  .header__inner{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1512px;
-    align-items: center;
-    margin: auto;
-  }
 
-  .logo{
-    cursor: default;
-  }
-
-  .menu {
-    max-width: 718px;
-  }
-
-.menu__list{
+.menu{
   display: flex;
-  justify-content: space-between;
+    a{
+      text-decoration: none;
+    }
+      
+      &_list{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+	      top: 0;
+	      left: 0;
+	      width: 100%;
+	      height:auto;
+	      padding: 15px;
+        background: rgb(247, 244, 244);
+	      transform: translateX(100%);
+	      transition: transform 0.5s; 
+          li{
+            list-style-type: none;
+            align-self:center;  
+              img{
+                padding-left: 5px;
+              }
+          }
+          a{
+            color: black;
+            }
+      }
 }
 
-.menu__list-item{
-  list-style: none;
-  cursor: pointer;
+.button{
+  a{
+    text-decoration: none;
+  }
+  margin: auto;
 }
 
-li img{
-  padding-left: 10px;
+.menu_list.active{
+  transform: translateX(0);
 }
 
-a{
-  text-decoration: none;
-  color: black;
-}
-
-.item1{
-  padding-right: 83.5px;
-}
-
-.item2{
-  padding-right: 76px;
-}
-
-.item3{
-  padding-right: 72px;
-}
-
-.item4{
-  padding-right: 45.5px;
-}
-
-.drop{
-  padding: 20px 50px;
-  background-color: white;
-  position: absolute;
-  margin-left: -40px;
-  border: 1px solid black;
-  display: none;
-}
- .dropmenu {
-  background-color: white;
-  list-style: none;
-  text-align: center;
-  padding-top: 5px;
-}
-
-.dropmenu a {
-background-color: white;
-}
-.item1:hover .drop{
-display: block;
-} 
-
-.item2:hover .drop{
-display: block;
-} 
-
-.item3:hover .drop{
-display: block;
-} 
-
-@media (max-width: 900px) {
-.item1{
-  padding-right: 40px;
-}
-
-.item2{
-  padding-right: 46px;
-}
-
-.item3{
-  padding-right: 35px;
-}
-
-.item4{
-  padding-right: 25.5px;
-}
-}
-
-@media (max-width: 760px) {
+@media (min-width:479px) {
   
-  .header{
-    margin-left: 20px;
-  }
-
-  .header__inner{
+.burger{
+    display: none;
+}
+ 
+.menu{
+  &_list{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+    position: relative;
+    transform: translateX(0);
+    background: #FFF5EA;
+      li{
+        padding-right: 10px;
+        img{
+          padding-left: 3px;
+        }
+      }
   }
-  .menu__list{
-    flex-direction: column;
-    gap: 20px;
-  }
+}
 
-  .drop{
-  padding: 20px 50px;
-  background-color: white;
-  position: absolute;
-  margin-left: 50px;
-  border: 1px solid black;
-  display: none;
+.button{
+  margin:0;
+}
+}
+
+@media (min-width:767px) {
+.header {
+  margin-left: 63px;
+  margin-right: 71px;
+    &_inner{
+      margin-top: 70px;
+      justify-content: center;
+    
+      .logo{
+        margin-right: auto;
+          img{
+            width: 92px;
+            height: 92px;
+          }
+      }
+  }
+}
+
+.menu{
+      
+  &_list{
+  padding-right: 0;
+    li{
+    
+      img{
+        padding-left: 10px;
+      }
+    }
+        
+  }
+}
+}
+
+@media (min-width:999px) {
+
+.menu{
+ 
+  &_list{
+      
+    .item1{
+      padding-right: 83.5px;
+    }
+
+    .item2{
+      padding-right: 76px;
+    }
+
+    .item3{
+      padding-right: 72px;
+    }
+
+    .item4{
+      padding-right: 45.5px;
+    }
+  }
 }
 }
 
