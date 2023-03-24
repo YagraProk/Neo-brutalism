@@ -3,7 +3,7 @@ import Button from '@/components/Button.vue'
 </script>
 
 <template>
-    <div class="worldwide">
+    <div class="worldwide" id="Company">
             <img class="worldwide_img" src="@\assets\images\Time.png" alt="Time image" >
             <div class="worldwide_content">  
             <h1 class="title">

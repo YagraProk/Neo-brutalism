@@ -1,5 +1,10 @@
 @import '@/assets/styles/fonts.css';
 
+html
+{
+  scroll-behavior: smooth;
+}
+
 * body{
   font-family: 'Inter', sans-serif;
   font-size: 16px;
