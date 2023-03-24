@@ -14,7 +14,7 @@ import Burger from '@/assets/UI/Burger.vue'
           <li class="item1">Service<img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
           <li class="item2">API <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
           <li class="item3">Company <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
-          <li class="item4"><a href="Pricing.html">Pricing</a></li>
+          <li class="item4"><a href="#">Pricing</a></li>
         </ul>
       </nav>
       <div class="button"><a href="#"><Button/></a></div>

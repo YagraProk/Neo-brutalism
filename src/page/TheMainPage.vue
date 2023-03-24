@@ -7,7 +7,7 @@ import TheFooter from '../components/TheFooter.vue'
 <template>
   <TheHeader/>
   <TheMain/>
-  <!-- <TheFooter/> -->
+  <TheFooter/>
 </template>
 
 <style scoped>
