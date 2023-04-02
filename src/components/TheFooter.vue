@@ -1,9 +1,5 @@
-<script setup>
-
-</script>
-
 <template>
-  <footer class="footer">
+  <footer class="footer" id="countries">
     <div class="footer_inner">
       <a href="/" class="logo">
         <img src="@\assets\images\Logo.svg" alt="Logo">
@@ -34,13 +30,13 @@
         </ul>
       </nav>
       <div class="contacts">
-        <a class="contacts_in" href="#"> 
+        <a class="contacts_in" href="https://www.instagram.com/"> 
             <img src="@\assets\images\instagram.svg" alt="Instagram link">
         </a>
-        <a class="contacts_lin" href="#">
+        <a class="contacts_lin" href="https://ru.linkedin.com/">
             <img src="@\assets\images\linkedin.svg" alt="Linkedin link">
         </a>
-        <a class="contacts_twit" href="#">
+        <a class="contacts_twit" href="https://twitter.com/">
             <img src="@\assets\images\twitter.svg" alt="Twitter link">
         </a>
       </div>
@@ -50,71 +46,80 @@
 </template>
 
 
+<script setup>
+
+</script>
+
 
 <style  lang="scss" scoped>
 
   .footer{
     max-width: 1512px;
-    border: 2px solid #000000;
+    border-top: 2px solid #000000;
     margin: auto;
-      &_inner{
-        background-color: #FFFFFF;
-        display: flex;
-        flex-direction: column;
-        padding: 10px 10px 10px 10px;
+    
+    &_inner{
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 10px 10px;
       
-          .logo{
+    .logo{
 
-            img{
-              width: 40px;
-              height: 40px;    
-            }
-          }
-      }
+    img{
+      width: 40px;
+      height: 40px;    
+    }
+    }
+    }
   }
 
   .menu{
+    margin: auto;
 
     &_list{
       display: flex;
       flex-direction: column;
-
-       
         
-        .head_submenu{
-          margin-left: 30px;
-          text-align: left;
-          font-family: 'IBM Plex Mono';
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 87%;
-          letter-spacing: -0.04em;
-        }
-          .submenu_list{
-             margin-top: 21px;
-            .item{
-              padding-bottom: 5px;
-                a{
-                  font-family: 'IBM Plex Mono';
-                  font-weight: 400;
-                  font-size: 16px;
-                  line-height: 87%;
-                  letter-spacing: -0.04em;
-                }
-            }
-          }
+    .head_submenu{
+      margin-left: 30px;
+      text-align: left;
+      font-family: 'IBM Plex Mono';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 87%;
+      letter-spacing: -0.04em;
+      cursor: pointer;
+    }
+    
+    .submenu_list{
+      margin-top: 21px;
+    
+    .item{
+      padding-bottom: 5px;
+    
+    a{
+      font-family: 'IBM Plex Mono';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 87%;
+      letter-spacing: -0.04em;
+      cursor: pointer;
+    }
+    }
+    }
              
-              .block1{
-                padding-bottom: 25px;
-              }
+    .block1{
+      padding-bottom: 25px;
+    }
 
-              .block2{
-                padding-bottom: 25px;
-              }
+    .block2{
+      padding-bottom: 25px;
+    }
 
-              .block3{
-                padding-bottom: 25px;
-              }
+    .block3{
+      padding-bottom: 25px;
+    }
     }
 
   }
@@ -135,132 +140,139 @@
     color:#000000;
   }
 
-@media(min-width:479px) {
+@media(min-width:480px) {
   .footer{
-   
-    &_inner{
-      // display: flex;
-      flex-direction: row;
-    }
+    border: 2px solid #000000;
   }
 
   .menu{
-    margin: auto;
-
+    
     &_list{
       margin-top: 0;
+      flex-direction: row;
+      text-align: center;
+      gap: 30px;
+
+      .head_submenu{
+        margin-left: 0;
+      }
+
+    .submenu_list{
+      padding-left: 0;  
+      justify-content: center;
+      align-items:center;
+      text-align: center;
     }
-  }      
-        
+    }      
+  }
+  
   .contacts{
     margin-top: 0;
+    gap: 30px;
   }
 }
 
-  @media(min-width:767px) {
+  @media(min-width:768px) {
   .footer{
+    margin-top: 20px;
     
     &_inner{
-      
-      .logo{
+      flex-direction: row;
+    .logo{
 
-        img{
-          width: 92px;
-          height: 92px;    
-        }
-        
-      }
+    img{
+      width: 92px;
+      height: 92px;    
+    }
+    }
     }
   }
 
   .menu{
     display: flex;
 
-      &_list{
-        margin-top: 0;
-        display: flex;
-      }
-  }
-    .contacts{
-    margin-left: auto;
+    &_list{
+      margin-top: 0;
+      display: flex;
+      flex-direction: row;
     }
-
   }
-
-  @media(min-width:999px) {
-    .footer{
     
-      &_inner{
-        flex-direction: row;
-        align-items:center;
-      }
+    .contacts{
+      display: flex;
+      margin: auto;
+      gap: 10px;
     }
 
+  }
+
+  @media(min-width:1000px) {
+ 
   .menu{
-
     padding-top: 52px;
-      &_list{
-        flex-direction: row;
-          
-          .submenu_list{
-            margin-left: 30px;
-            padding: 0;
-          }
-      }
 
+    &_list{
+      gap: 130px;
+              
+    .submenu_list{
+      margin-left: 0px;
+      padding: 0;
+    }
+    }
   }
 
   .contacts{
     display: flex;
-    padding-top: 79px;
+    padding-top: 0;
+    gap: 36px;
   }
 }
 
 @media(min-width:1440px){
   .footer{
     
-      &_inner{
-        padding: 52px 81px 48px 62px;
-        justify-content: space-between;
+    &_inner{
+      padding: 52px 81px 48px 62px;
+      justify-content: space-between;
         
-          .logo{
-            padding-right: 180px;
-            
-          }
-      }
+    .logo{
+      padding-right: 180px;
+    }
+    }
   }
 
   .menu{
 
     &_list{
-     
-      .submenu_list{
-         margin-top: 15px;
-          .item{
-            padding-bottom: 8px;
-          }
-      }
-              .block1{
-                padding-right: 64px;
-              }
-
-              .block2{
-                padding-right: 64px;
-              }
+      gap: 30px;
+      
+    .submenu_list{
+      margin-top: 15px;
+    
+    .item{
+      padding-bottom: 8px;
+    }
+    }
+    .block1{
+      padding-right: 64px;
     }
 
+    .block2{
+      padding-right: 64px;
+    }
+    }
   }
 
   .contacts{
     gap: 0px;
     
-      &_in{
-        padding-right: 40px;
-      }
+    &_in{
+      padding-right: 40px;
+    }
 
-      &_lin{
-        padding-right: 40px;
-      }
+    &_lin{
+      padding-right: 40px;
+    }
   }
 }
   

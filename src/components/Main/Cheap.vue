@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div class="cheap" id="Service">
             <img class="cheap_img" src="@\assets\images\Cheap.png" alt="Transfer image">
@@ -11,12 +7,19 @@
     </div>
 </template>
 
+
+<script setup>
+
+</script>
+
+
 <style lang="scss" scoped>
     
 .cheap{
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+   margin-top: 80px;
        
     &_img{
         max-width: 90%;
@@ -32,54 +35,57 @@
     }
 }
 
-@media(min-width: 767px){
-    .cheap{
-        margin-top: 100px;
+@media(min-width: 768px){
+    
+.cheap{
+    margin-top: 100px;
           
-            &_title{
-        
-                .text{
-                    margin-top: 20px;
-                }
-            }
+    &_title{
+       
+    .text{
+        margin-top: 20px;
+    }
     }
 }
+}
 
-@media (min-width:999px){
-    .cheap{
-        margin: 100px 10px 10px 10px;
+@media (min-width:1000px){
+ 
+.cheap{
+    margin: 100px 10px 10px 10px;
            
-            &_img{
-                max-width: 70%;
-                height: auto;
-            }
+    &_img{
+        max-width: 70%;
+        height: auto;
+    }
 
-            &_title{
+    &_title{
         
-                .text{
-                    margin-top: 20px;
-                }
-            }
+    .text{
+        margin-top: 20px;
+    }
     }
 }
+}
 
-@media (min-width:1439px){
-    .cheap{
-        margin-bottom: 135px;
+@media (min-width:1440px){
+
+.cheap{
+    margin-bottom: 135px;
    
-        &_img{
-            max-width: 70%;
-            height: auto;
-        }
-
-        &_title{
-            padding-right: 37px;
-        
-                .text{
-                    margin-top: 20px;
-                }
-        }
+    &_img{
+        max-width: 70%;
+        height: auto;
     }
+
+    &_title{
+        padding-right: 37px;
+        
+    .text{
+        margin-top: 20px;
+    }
+    }
+}
 }
 
 </style>

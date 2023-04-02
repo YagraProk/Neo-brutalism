@@ -1,8 +1,3 @@
-<script setup>
-import Button from '/src/components/Button.vue'
-import Burger from '@/assets/UI/Burger.vue'
-</script>
-
 <template>
   <header class="header">
     <div class="header_inner">
@@ -10,101 +5,149 @@ import Burger from '@/assets/UI/Burger.vue'
         <img src="@\assets\images\Logo.svg" alt="Logo">
       </a>
       <nav class="menu">
-        <ul class="menu_list">
-          <li class="item1"><a href="#Service">Service</a><img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
-          <li class="item2"><a href="#API">API</a> <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
-          <li class="item3"><a href="#Company">Company</a> <img src="@\assets\images\Vector.svg" alt="Arrow for menu link"></li>
+        <ul :class="['menu_list', {'active': isActive}]">
+          <li class="item1"><a href="#Service">Service</a></li>
+          <li class="item2"><a href="#API">API</a></li>
+          <li class="item3"><a href="#Company">Company</a></li>
           <li class="item4"><a href="#">Pricing</a></li>
         </ul>
       </nav>
       <div class="button"><a href="#"><Button/></a></div>
-      <div class="burger"><Burger/></div>
-    </div>
+      <div class="burger"><Burger :is-active="isActive" @on-burger="toggle($event)"/></div>
+      </div>
   </header>
 </template>
+
+
+<script setup>
+import Button from '@/components/Button.vue'
+import Burger from '@/components/UI/Burger.vue'
+import {ref} from 'vue'
+
+let isActive = ref(false)
+
+function toggle(flag){
+  isActive.value = flag;
+  isActive.value === true ? document.body.style.overflow = 'hidden' : document.body.style.overflow = '';
+}
+</script>
+
 
 <style lang="scss" scoped>
 
 .header {
   margin: 10px 10px 10px 10px;
-    &_inner{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1400px;
-      margin: auto;
-      .logo{
-        cursor: default;
-          img{
-            width: 40px;
-            height: 40px;
-          }
-      }
-    }
+  position: sticky;
+  top:0;
+  background-color: #FFF5EA;
+  
+  &_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+   
+  .logo{
+     cursor: default;
+  
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  }
+  }
 }
 
 .menu{
   display: flex;
-    a{
-      text-decoration: none;
-    }
+  
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
       
-      &_list{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-	      top: 0;
-	      left: 0;
-	      width: 100%;
-	      height:auto;
-	      padding: 15px;
-        background: rgb(247, 244, 244);
-	      transform: translateX(100%);
-	      transition: transform 0.5s; 
-          li{
-            list-style-type: none;
-            align-self:center;  
-              img{
-                padding-left: 5px;
-              }
-          }
-          a{
-            color: black;
-            }
-      }
+  &_list{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height:100%;
+	  padding: 0;
+    margin: 0;
+    background: rgb(247, 244, 244);
+	  transform: translateX(100%);
+	  transition: transform 0.3s; 
+    justify-content: center;
+    gap: 25px; 
+ 
+  li{
+    list-style-type: none;
+    align-self:center; 
+    font-size: 24px; 
+  }
+  
+  a{
+    color: black;
+    padding: 5px 130px 5px 130px;
+  }
+  }
 }
 
 .button{
+  
   a{
     text-decoration: none;
   }
-  margin: auto;
+    margin: auto;
 }
 
 .menu_list.active{
   transform: translateX(0);
 }
 
-@media (min-width:479px) {
+@media (min-width:480px) {
+
+.header {
+  margin: 10px 10px 10px 10px;
+  position: sticky;
+  top:0;
+  background-color: #FFF5EA;
   
+  &_inner{  
+    justify-content: end;
+  
+  .logo{
+    margin-right: auto;
+  }
+  }
+}
+
 .burger{
-    display: none;
+  display: none;
 }
  
 .menu{
+  padding-right: 20px;
+ 
   &_list{
-    display: flex;
     flex-direction: row;
-    padding: 10px;
     position: relative;
     transform: translateX(0);
     background: #FFF5EA;
-      li{
-        padding-right: 10px;
-        img{
-          padding-left: 3px;
-        }
-      }
+    gap: 5px; 
+  
+  li{
+    padding-right: 0;
+    font-size: 16px; 
+  }
+  
+  a{
+    padding: 5px;
+  }
   }
 }
 
@@ -113,21 +156,23 @@ import Burger from '@/assets/UI/Burger.vue'
 }
 }
 
-@media (min-width:767px) {
+@media (min-width:768px) {
 .header {
   margin-left: 63px;
-  margin-right: 71px;
-    &_inner{
-      margin-top: 70px;
-      justify-content: center;
+  margin-right: 41px;
+  
+  &_inner{
+    margin-top: 70px;
+    justify-content: end;
     
-      .logo{
-        margin-right: auto;
-          img{
-            width: 92px;
-            height: 92px;
-          }
-      }
+  .logo{
+    margin-right: auto;
+  
+  img{
+    width: 92px;
+    height: 92px;
+  }
+  }
   }
 }
 
@@ -135,39 +180,50 @@ import Burger from '@/assets/UI/Burger.vue'
       
   &_list{
   padding-right: 0;
-    li{
-    
-      img{
-        padding-left: 10px;
-      }
-    }
-        
+  gap: 25px;        
   }
 }
 }
 
-@media (min-width:999px) {
+@media (min-width:1000px) {
+
+.header {
+  margin-right: 71px;
+}
 
 .menu{
- 
+  padding-right:0;
+
   &_list{
-      
-    .item1{
-      padding-right: 83.5px;
-    }
-
-    .item2{
-      padding-right: 76px;
-    }
-
-    .item3{
-      padding-right: 72px;
-    }
-
-    .item4{
-      padding-right: 45.5px;
-    }
+    gap: 0;
+  .item1{
+    padding-right: 83.5px;
   }
+
+  .item2{
+    padding-right: 76px;
+  }
+
+  .item3{
+    padding-right: 72px;
+  }
+
+  .item4{
+    padding-right: 45.5px;
+  }
+  }
+}
+}
+
+@media(min-width: 1440px) {
+
+.menu{
+    
+  a{
+    &:hover {
+    background-color: #FFFB47;
+    }
+  }  
 }
 }
 

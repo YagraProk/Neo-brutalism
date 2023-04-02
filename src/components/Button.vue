@@ -1,14 +1,14 @@
-<script setup>
-
-</script>
-
 <template>
 <a class="button" href="#">Get started</a> 
 </template>
 
+
+<script setup>
+
+</script>
+
+
 <style scoped>
-
-
 
 .button {
   border: 2px solid black;
