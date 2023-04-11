@@ -6,7 +6,7 @@
       </a>
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
-          <li class="item1"><a href="#Service">Service</a></li>
+          <li class="item1" @click="isActive = false"><a href="#Service">Service</a></li>
           <li class="item2"><a href="#API">API</a></li>
           <li class="item3"><a href="#Company">Company</a></li>
           <li class="item4"><a href="#">Pricing</a></li>
@@ -28,8 +28,11 @@ let isActive = ref(false)
 
 function toggle(flag){
   isActive.value = flag;
-  isActive.value === true ? document.body.style.overflow = 'hidden' : document.body.style.overflow = '';
+  document.body.style.overflow = isActive.value ? 'hidden' : '';
+ 
+
 }
+
 </script>
 
 

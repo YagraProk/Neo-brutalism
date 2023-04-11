@@ -24,7 +24,6 @@ const props = defineProps({
 function toggleBurger(){
     isActive.value = !isActive.value
     emit('on-burger', isActive.value)
-       
 }
 </script>
 

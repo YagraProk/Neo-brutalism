@@ -3,7 +3,7 @@
       <Hero/>
       <Cheap/>
       <Available/>
-       <Worldwide/> 
+      <Worldwide/> 
     </main>    
 </template>
   
