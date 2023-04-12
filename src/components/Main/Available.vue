@@ -28,8 +28,7 @@
 .available{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-        
+            
     &_content{
         display: flex;
         flex-direction: column;

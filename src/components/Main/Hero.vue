@@ -22,9 +22,8 @@ import Button from '@/components/Button.vue'
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 50px; 
     margin-top: 30px;
-        
+            
     &_title{
         -webkit-text-stroke: 1px Black;
         margin-bottom: 0px;

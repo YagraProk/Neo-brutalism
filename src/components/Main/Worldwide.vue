@@ -39,7 +39,7 @@ import Button from '@/components/Button.vue'
 <style lang="scss" scoped>
 
 .worldwide{
-  margin: 60px 15px 0px 15px;
+  margin: 40px 15px 0px 15px;
   display: flex;
   flex-direction: column;
   align-items:center;
@@ -111,6 +111,9 @@ import Button from '@/components/Button.vue'
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: dollar 60s infinite; 
+    transform-origin: -15% 80%; 
+    
   .dollarbackground {
     position: absolute;
     z-index: -1;
@@ -158,66 +161,66 @@ import Button from '@/components/Button.vue'
   letter-spacing: -0.04em;
 }
 
-// @media(min-width:768px){
-// .worldwide{
+@keyframes dollar {
+100%{
+transform: rotate(360deg);
+}
+}
+
+@media(min-width:768px){
+.worldwide{
        
-//     &_content{
-//         margin-bottom: 80px;
-//     }
+  &_content{
+    margin-bottom: 80px;
+  }
 
-    
-//     .text{
-//         padding-top: 38px;
-//     }
-// }
-// }
+  .text{
+    padding-top: 38px;
+  }
+}
+}
 
-// @media(min-width:1000px){
-// .worldwide{
-//     flex-direction: row;
+@media(min-width:1000px){
+.worldwide{
+  flex-direction: row;
             
-//     &_img{
-//         width: 452px;
-//         height: 452px;
-//     }
+  &_content{
+    margin-bottom: 80px;
+    margin-left: 15px;
+  }
 
-//     &_content{
-//         margin-bottom: 80px;
-//     }
+  .text{
+    padding-top: 38px;
+    padding-bottom: 128px;
+  }
+}
+}
 
-//     .text{
-//         padding-top: 38px;
-//         padding-bottom: 128px;
-//     }
-// }
-// }
+@media(min-width:1200px){
 
-// @media(min-width:1200px){
+.worldwide{
+  margin-top: 100px;
+  margin-bottom: 108px;
 
-// .worldwide{
-//     margin-top: 100px;
-//     margin-bottom: 108px;
-    
-//     &_img{
-//         padding-right: 65px;
-//     }
+  &_content{
+  
+  .title{
+    line-height: 87%;
+    margin-bottom: 36px;
+  }
 
-//     .title{
-//         line-height: 87%;
-//         margin-bottom: 36px;
-//     }
+  .text{
+    margin-top:0;
+    padding-top: 0;
+    padding-bottom: 128px;
+  }
 
-//     .text{
-//         margin-top:0;
-//         padding-top: 0;
-//         padding-bottom: 128px;
-//     }
-
-//     div{
-//         margin-right: auto;
-//     }    
-// }
-// }
+  div{
+    margin-right: auto;
+  }    
+  }
+}
+}
 </style>
 
 
