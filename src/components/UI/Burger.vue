@@ -7,24 +7,32 @@
 
 <script setup>
 
-import { ref } from "vue";
+import { ref, watch } from "vue";  
+  
+const isActive = ref(props.isActive)
 
-let isActive = ref(false)
+const emit = defineEmits(['on-burger'])  
+  
+const props = defineProps({  
+    isActive:{  
+        type: Boolean,  
+        required: true  
+    }  
+})  
+  
+  
+function toggleBurger(){  
+    isActive.value = !isActive.value  
+    emit('on-burger', isActive.value)  
+    
+} 
 
-const emit = defineEmits(['on-burger'])
-
-const props = defineProps({
-    isActive:{
-        type: Boolean,
-        required: true
-    }
-})
+watch(() => props.isActive, (newVal) => {
+  isActive.value = newVal
+  document.body.style.overflow = isActive.value ? 'hidden' : '';
+}) 
 
 
-function toggleBurger(){
-    isActive.value = !isActive.value
-    emit('on-burger', isActive.value)
-}
 </script>
 
 
@@ -35,7 +43,7 @@ function toggleBurger(){
     width: 40px;
 	height: 40px;
 	position: relative;
-        
+            
     span,
     ::before,
     ::after {
@@ -73,7 +81,9 @@ function toggleBurger(){
         transition: transform 0.2s ease-out;
     }
 }
+
    
+
 </style>
 
 
