@@ -12,10 +12,7 @@ html
 }
 
 #Service, #API, #Company{
-  padding-top: 65px;
-	margin-top: -65px;
-	-webkit-background-clip: content-box;
-	background-clip: content-box;
+  scroll-margin-top: 65px;
 }
 
  h1 {
@@ -46,8 +43,7 @@ p{
   }
 
   #Service, #API, #Company{
-    padding-top: 190px;
-    margin-top: -190px;
+    scroll-margin-top: 190px;
   }
 }
 
