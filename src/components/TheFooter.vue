@@ -62,7 +62,8 @@
       background-color: #FFFFFF;
       display: flex;
       flex-direction: column;
-      padding: 10px 10px 10px 10px;
+      padding: 10px;
+      align-items:center;
       
     .logo{
 
@@ -75,15 +76,15 @@
   }
 
   .menu{
-    margin: auto;
+    margin: 20px auto;
 
     &_list{
       display: flex;
       flex-direction: column;
+      padding: 0;
+      text-align: center;
         
     .head_submenu{
-      margin-left: 30px;
-      text-align: left;
       font-family: 'IBM Plex Mono';
       font-weight: 700;
       font-size: 24px;
@@ -94,10 +95,11 @@
     
     .submenu_list{
       margin-top: 21px;
+      padding: 0;
     
     .item{
-      padding-bottom: 5px;
-    
+      margin-bottom: 5px;
+          
     a{
       font-family: 'IBM Plex Mono';
       font-weight: 400;
@@ -110,15 +112,15 @@
     }
              
     .block1{
-      padding-bottom: 25px;
+      margin-bottom: 25px;
     }
 
     .block2{
-      padding-bottom: 25px;
+      margin-bottom: 25px;
     }
 
     .block3{
-      padding-bottom: 25px;
+      margin-bottom: 25px;
     }
     }
 
@@ -148,17 +150,11 @@
   .menu{
     
     &_list{
-      margin-top: 0;
       flex-direction: row;
       text-align: center;
       gap: 30px;
 
-      .head_submenu{
-        margin-left: 0;
-      }
-
     .submenu_list{
-      padding-left: 0;  
       justify-content: center;
       align-items:center;
       text-align: center;
@@ -167,17 +163,16 @@
   }
   
   .contacts{
-    margin-top: 0;
     gap: 30px;
   }
 }
 
   @media(min-width:768px) {
   .footer{
-    margin-top: 20px;
-    
+        
     &_inner{
       flex-direction: row;
+    
     .logo{
 
     img{
@@ -213,11 +208,6 @@
 
     &_list{
       gap: 130px;
-              
-    .submenu_list{
-      margin-left: 0px;
-      padding: 0;
-    }
     }
   }
 
@@ -250,15 +240,15 @@
       margin-top: 15px;
     
     .item{
-      padding-bottom: 8px;
+      margin-bottom: 8px;
     }
     }
     .block1{
-      padding-right: 64px;
+      margin-right: 64px;
     }
 
     .block2{
-      padding-right: 64px;
+      margin-right: 64px;
     }
     }
   }
@@ -267,11 +257,11 @@
     gap: 0px;
     
     &_in{
-      padding-right: 40px;
+      margin-right: 40px;
     }
 
     &_lin{
-      padding-right: 40px;
+      margin-right: 40px;
     }
   }
 }

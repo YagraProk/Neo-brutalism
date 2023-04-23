@@ -28,6 +28,7 @@
 .available{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
             
     &_content{
         display: flex;
@@ -42,14 +43,14 @@
     
     .title{
         text-align: center;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     .text{
         display: flex;
         text-align: center;
         justify-content: center;
-        margin-bottom:0;
+        margin-bottom:10px;
                             
     img{
         width: 5%;
@@ -60,7 +61,6 @@
     }
 
     &_img{
-        padding-top: 10px;
         max-width: 70%;
         height: auto;
         margin: auto;
@@ -70,12 +70,12 @@
    
 @media(min-width: 768px){
 .available{
-
+    margin-bottom: 60px;
     &_content{
 
     .text{
-        display: block;
-                
+        display: block;                   
+    
     img{
         width: 20px;
         height: auto;
@@ -85,7 +85,6 @@
     }
 
     &_img{
-        padding-top: 10px;
         max-width: 70%;
         height: auto;
         margin: auto;
@@ -95,7 +94,6 @@
 
 @media(min-width: 1000px){
 .available{
-    margin-top: 115px;
     flex-direction: row;
         
     &_content{
@@ -111,19 +109,18 @@
 
     .text{
         text-align: right;
-        padding-bottom: 47px;
+        margin-bottom: 47px;
     
     img{
         width: 16px;
         height: 8px;
         transform: rotate(0deg);
-        padding-bottom: 3px;
+        margin-bottom: 3px;
     }
     }
     }
 
     &_img{
-        padding-top: 10px;
         max-width: 70%;
         height: auto;
         margin: auto;
@@ -133,8 +130,7 @@
 
 @media(min-width: 1440px){
 .available{
-    margin-top: 215px;
-        
+    margin-bottom: 80px;        
     &_content{
 
     .title{
@@ -142,7 +138,7 @@
     }
 
     .text{
-        padding-bottom: 57px;
+        margin-bottom: 57px;
     }
     }
 }

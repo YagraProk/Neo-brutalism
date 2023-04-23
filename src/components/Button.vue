@@ -20,6 +20,8 @@
   color: #FFFFFF; 
   font-weight: 700;
   text-decoration: none;
+  display: block;
+  width: fit-content;
 }
 
 a:hover{

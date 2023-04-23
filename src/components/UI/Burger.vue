@@ -67,6 +67,7 @@ watch(() => props.isActive, (newVal) => {
 }    
 
 .burger.active {
+    background-color:#54BF58;
     span{
         height: 0;
     }

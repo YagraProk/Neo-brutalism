@@ -6,10 +6,10 @@
       </a>
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
-          <li class="item1" @click="isActive = false"><a href="#Service">Service</a></li>
-          <li class="item2" @click="isActive = false"><a href="#API">API</a></li>
-          <li class="item3" @click="isActive = false"><a href="#Company">Company</a></li>
-          <li class="item4" @click="isActive = false"><a href="#">Pricing</a></li>
+         <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
+          <a :href="link">{{title}}</a>
+        </li>
+          
         </ul>
       </nav>
       <div class="button"><a href="#"><Button/></a></div>
@@ -23,6 +23,7 @@
 import Button from '@/components/Button.vue'
 import Burger from '@/components/UI/Burger.vue'
 import {ref} from 'vue'
+import NAV_LIST from '@/static/nav.js' 
 
 let isActive = ref(false)
 
@@ -37,10 +38,11 @@ function toggle(flag){
 <style lang="scss" scoped>
 
 .header {
-  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   position: sticky;
   top:0;
   background-color: #FFF5EA;
+  margin-bottom: 30px;
   
   &_inner{
     display: flex;
@@ -79,11 +81,11 @@ function toggle(flag){
 	  height:100%;
 	  padding: 0;
     margin: 0;
-    background: rgb(247, 244, 244);
+    background: #54BF58;
 	  transform: translateX(100%);
 	  transition: transform 0.3s; 
     justify-content: center;
-    gap: 25px; 
+    gap: 45px; 
  
   li{
     list-style-type: none;
@@ -93,7 +95,7 @@ function toggle(flag){
   
   a{
     color: black;
-    padding: 5px 130px 5px 130px;
+    padding: 15px 130px 15px 130px;
   }
   }
 }
@@ -113,7 +115,7 @@ function toggle(flag){
 @media (min-width:480px) {
 
 .header {
-  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   position: sticky;
   top:0;
   background-color: #FFF5EA;
@@ -159,15 +161,16 @@ function toggle(flag){
 
 @media (min-width:768px) {
 .header {
-  margin-left: 63px;
-  margin-right: 41px;
+  padding-left: 63px;
+  padding-right: 41px;
+  margin-bottom: 70px;
   
   &_inner{
-    margin-top: 70px;
+    padding-top: 70px;
     justify-content: end;
     
   .logo{
-    margin-right: auto;
+    padding-right: auto;
   
   img{
     width: 92px;
@@ -189,27 +192,16 @@ function toggle(flag){
 @media (min-width:1000px) {
 
 .header {
-  margin-right: 71px;
+  padding-right: 71px;
 }
 
 .menu{
   padding-right:0;
 
   &_list{
-    gap: 0;
-  .item1{
-    padding-right: 83.5px;
-  }
+    gap:70px;
 
-  .item2{
-    padding-right: 76px;
-  }
-
-  .item3{
-    padding-right: 72px;
-  }
-
-  .item4{
+  .item:last-child{
     padding-right: 45.5px;
   }
   }
