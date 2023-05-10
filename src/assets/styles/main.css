@@ -6,7 +6,7 @@ html
 * body{
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 20px;
   color:black;
   background-color: #FFF5EA;
 }
@@ -18,7 +18,7 @@ html
  h1 {
   font-family: 'IBM Plex Mono', sans-serif;
   font-size: 40px;
-  line-height: 87%;
+  line-height: 40px;
   color:black;
 }
 
@@ -29,13 +29,14 @@ h2{
 
 p{
   font-size: 20px;
-  line-height: 87%;
+  line-height: 22px;
   
 }
 
-@media(min-width: 767px){
+@media(min-width: 768px){
   h1 {
     font-size: 64px;
+    line-height: 68px;
   }
 
   p {

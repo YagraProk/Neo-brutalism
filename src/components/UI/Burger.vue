@@ -39,7 +39,7 @@ watch(() => props.isActive, (newVal) => {
 <style lang="scss" scoped>
 .burger {
     border:none;
-    background-color:#FFF5EA;
+    background-color:transparent;
     width: 40px;
 	height: 40px;
 	position: relative;
@@ -67,7 +67,7 @@ watch(() => props.isActive, (newVal) => {
 }    
 
 .burger.active {
-    background-color:#54BF58;
+    
     span{
         height: 0;
     }

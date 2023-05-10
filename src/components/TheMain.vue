@@ -18,10 +18,17 @@ import Worldwide from '@/components/Main/Worldwide.vue'
 
 
   <style scoped>
-    .main{
-        max-width: 1300px;
-        margin: 0 auto;
-    }
+  .main{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+@media(min-width: 768px){
+  .main{
+    padding: 0 20px;
+  }
+}
 
    </style>
   

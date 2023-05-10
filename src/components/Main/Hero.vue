@@ -39,14 +39,16 @@ import Button from '@/components/Button.vue'
     }
     
     &_text{ 
-        line-height: 122%;
+        line-height: 28px;
         padding: 0px 20px;
         display: flex;
         flex-direction: column;
         margin-bottom: 40px;
     } 
     
-    div {margin: auto;
+    div {
+        display: flex;
+        justify-content: center;
     }
 }
 

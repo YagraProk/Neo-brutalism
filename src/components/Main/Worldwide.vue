@@ -31,18 +31,19 @@ import Button from '@/components/Button.vue'
 <style lang="scss" scoped>
 
 .worldwide{
-  margin: 0px 15px;
   display: flex;
   flex-direction: column;
   align-items:center;
   box-sizing: border-box;
+  gap: 30px;
+  margin-bottom: 50px;
 
   &_wrapper{ 
     display: block;
     border-radius: 50%;
     box-sizing: border-box;
     border: 4px solid #000000;
-    box-shadow: 12px 12px 0px #000000;
+    box-shadow: 5px 5px 0px #000000;
     z-index: -1;
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -51,13 +52,13 @@ import Button from '@/components/Button.vue'
     background: #FFFB47;
 
   .twelve{
-    top: 0;
+    top: 5px;
     left: 50%;
     transform: translate(-50%, 0);
   }
 
   .six{
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -79,12 +80,13 @@ import Button from '@/components/Button.vue'
     display: flex;
     flex-direction: column;
     align-items:center;
-    margin-bottom: 50px;
+    gap: 40px;
     
   .title{
     text-align: center;
-    line-height: 1.2;
-    margin-bottom: 0px;
+    line-height: 40px;
+    margin: 0;
+    font-size: 35px;
     
   span{
     background-color: #BAFFCD;
@@ -94,7 +96,8 @@ import Button from '@/components/Button.vue'
 
   .text{
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0;
+    line-height: 30px;
   }
   }  
 
@@ -135,15 +138,18 @@ transform: rotate(360deg);
 
 @media(min-width:768px){
 .worldwide{
-   
-  &_content{
-    margin-bottom: 70px;    
-  .title{
-    margin-bottom: 38px;
+  margin-bottom: 70px;
+
+  &_wrapper{
+    box-shadow: 12px 12px 0px #000000;
   }
 
-  .text{
-    margin-bottom: 80px;
+  &_content{
+    gap: 60px;     
+  .title{
+    font-size: 50px;
+    line-height: 55px;
+    
   }
   }
 }
@@ -153,17 +159,17 @@ transform: rotate(360deg);
 .worldwide{
   flex-direction: row;
   margin-bottom: 80px;
+  gap: 50px;
             
   &_content{
-    margin-left: 15px;
-
+    
   .title{
     margin-bottom: 74px;
   }
   }
 
   .text{
-    margin-bottom: 128px;
+    margin-bottom: 138px;
   }
 }
 }
@@ -173,9 +179,11 @@ transform: rotate(360deg);
 .worldwide{
   
   &_content{
-  
+    gap: 0;
+
   .title{
-    line-height: 87%;
+    font-size: 64px;
+    line-height: 70px;
   }
 
   .text{
@@ -183,7 +191,7 @@ transform: rotate(360deg);
   }
 
   div{
-    margin-right: auto;
+    align-self: start;
   }    
   }
 }

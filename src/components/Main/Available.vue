@@ -29,11 +29,13 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+    gap: 20px;
             
     &_content{
         display: flex;
         flex-direction: column;
-
+        gap: 15px;
+    
     a{
         text-decoration: none;
         color: #000;  
@@ -50,10 +52,10 @@
         display: flex;
         text-align: center;
         justify-content: center;
-        margin-bottom:10px;
+        margin: 0;
                             
     img{
-        width: 5%;
+        max-width: 5%;
         transform: rotate(90deg);
         z-index: -1;
     }
@@ -62,8 +64,7 @@
 
     &_img{
         max-width: 70%;
-        height: auto;
-        margin: auto;
+        align-self: center;
     }
 }
 
@@ -71,14 +72,16 @@
 @media(min-width: 768px){
 .available{
     margin-bottom: 60px;
+    gap: 40px;
+
     &_content{
+        gap: 35px;
 
     .text{
-        display: block;                   
-    
+        display: block;   
+        line-height: 26px; 
+        
     img{
-        width: 20px;
-        height: auto;
         transform: rotate(90deg);
     }
     }
@@ -86,8 +89,6 @@
 
     &_img{
         max-width: 70%;
-        height: auto;
-        margin: auto;
     }
 }
 }
@@ -99,18 +100,17 @@
     &_content{
         display: flex;
         flex-direction: column;
-        align-items:end;
-        margin-right: 20px;
-
+        align-items:center;
+        gap: 26px;
+        
     .title{
-        text-align: end;
-        margin-bottom: 26px;
+        text-align: center;
     }
 
     .text{
-        text-align: right;
+        text-align: center;
         margin-bottom: 47px;
-    
+           
     img{
         width: 16px;
         height: 8px;
@@ -122,16 +122,16 @@
 
     &_img{
         max-width: 70%;
-        height: auto;
-        margin: auto;
     }
 }
 }
 
 @media(min-width: 1440px){
 .available{
-    margin-bottom: 80px;        
+    margin-bottom: 80px;
+
     &_content{
+        align-items: end;
 
     .title{
         margin-bottom: 36px;

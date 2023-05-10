@@ -57,13 +57,14 @@
     max-width: 1512px;
     border-top: 2px solid #000000;
     margin: auto;
-    
+        
     &_inner{
       background-color: #FFFFFF;
       display: flex;
       flex-direction: column;
       padding: 10px;
       align-items:center;
+      gap: 40px;
       
     .logo{
 
@@ -76,19 +77,20 @@
   }
 
   .menu{
-    margin: 20px auto;
-
+    
     &_list{
       display: flex;
       flex-direction: column;
       padding: 0;
       text-align: center;
+      gap: 25px;
+      margin: 0;
         
     .head_submenu{
       font-family: 'IBM Plex Mono';
       font-weight: 700;
       font-size: 24px;
-      line-height: 87%;
+      line-height: 26px;
       letter-spacing: -0.04em;
       cursor: pointer;
     }
@@ -96,9 +98,12 @@
     .submenu_list{
       margin-top: 21px;
       padding: 0;
+      gap: 5px;
+      display: flex;
+      flex-direction: column;
     
     .item{
-      margin-bottom: 5px;
+      // margin-bottom: 5px;
           
     a{
       font-family: 'IBM Plex Mono';
@@ -110,27 +115,13 @@
     }
     }
     }
-             
-    .block1{
-      margin-bottom: 25px;
     }
-
-    .block2{
-      margin-bottom: 25px;
-    }
-
-    .block3{
-      margin-bottom: 25px;
-    }
-    }
-
   }
 
 
   .contacts{
     display: flex;
     gap: 15px;
-    margin: auto;
   }
 
   .menu_list, 
@@ -172,12 +163,13 @@
         
     &_inner{
       flex-direction: row;
+      padding: 10px 30px 30px;
     
     .logo{
-
+      align-self: flex-start;
     img{
-      width: 92px;
-      height: 92px;    
+      width: 50px;
+      height: 50px;    
     }
     }
     }
@@ -185,27 +177,32 @@
 
   .menu{
     display: flex;
-
-    &_list{
-      margin-top: 0;
-      display: flex;
-      flex-direction: row;
-    }
+    flex-grow: 1;
+    justify-content: center;
+    align-self:center;
   }
     
     .contacts{
       display: flex;
-      margin: auto;
       gap: 10px;
     }
 
   }
 
-  @media(min-width:1000px) {
+@media(min-width:1000px) {
  
+  .footer{
+        
+    &_inner{
+           
+    .logo{
+      align-self: center;
+    }
+    }
+  }
+  
   .menu{
-    padding-top: 52px;
-
+  
     &_list{
       gap: 130px;
     }
@@ -213,8 +210,23 @@
 
   .contacts{
     display: flex;
-    padding-top: 0;
     gap: 36px;
+  }
+}
+
+@media(min-width:1200px){
+  .footer{
+        
+    &_inner{
+        
+    .logo{
+    
+    img{
+      width: 92px;
+      height: 92px;    
+    }
+    }
+    }
   }
 }
 
@@ -222,47 +234,24 @@
   .footer{
     
     &_inner{
-      padding: 52px 81px 48px 62px;
+      padding: 50px;
       justify-content: space-between;
-        
-    .logo{
-      padding-right: 180px;
-    }
     }
   }
 
   .menu{
 
     &_list{
-      gap: 30px;
+      gap: 95px;
       
     .submenu_list{
-      margin-top: 15px;
-    
-    .item{
-      margin-bottom: 8px;
-    }
-    }
-    .block1{
-      margin-right: 64px;
-    }
-
-    .block2{
-      margin-right: 64px;
+      gap:8px;
     }
     }
   }
 
   .contacts{
-    gap: 0px;
-    
-    &_in{
-      margin-right: 40px;
-    }
-
-    &_lin{
-      margin-right: 40px;
-    }
+    gap: 40px;
   }
 }
   

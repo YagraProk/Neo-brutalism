@@ -9,7 +9,6 @@
          <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
           <a :href="link">{{title}}</a>
         </li>
-          
         </ul>
       </nav>
       <div class="button"><a href="#"><Button/></a></div>
@@ -43,13 +42,13 @@ function toggle(flag){
   top:0;
   background-color: #FFF5EA;
   margin-bottom: 30px;
-  
+    
   &_inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    margin: auto;
+    box-sizing: border-box;
    
   .logo{
      cursor: default;
@@ -91,11 +90,18 @@ function toggle(flag){
     list-style-type: none;
     align-self:center; 
     font-size: 24px; 
+    width: 100%;
+    height: auto;
+    text-align: center;
   }
   
   a{
     color: black;
-    padding: 15px 130px 15px 130px;
+    padding: 15px 0;
+    display: block;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    font-weight: 700;
   }
   }
 }
@@ -105,7 +111,10 @@ function toggle(flag){
   a{
     text-decoration: none;
   }
-    margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .menu_list.active{
@@ -124,7 +133,7 @@ function toggle(flag){
     justify-content: end;
   
   .logo{
-    margin-right: auto;
+    flex-grow: 1;
   }
   }
 }
@@ -134,14 +143,14 @@ function toggle(flag){
 }
  
 .menu{
-  padding-right: 20px;
+  padding-right: 10px;
  
   &_list{
     flex-direction: row;
     position: relative;
     transform: translateX(0);
     background: #FFF5EA;
-    gap: 5px; 
+    gap: 10px; 
   
   li{
     padding-right: 0;
@@ -150,41 +159,43 @@ function toggle(flag){
   
   a{
     padding: 5px;
+    text-decoration: none;
+    font-weight: 400;
   }
   }
 }
 
 .button{
   margin:0;
+  flex-grow: 0;
 }
 }
 
 @media (min-width:768px) {
 .header {
-  padding-left: 63px;
-  padding-right: 41px;
+  padding-right: 65px;
+  padding-left: 65px;
   margin-bottom: 70px;
   
   &_inner{
-    padding-top: 70px;
-    justify-content: end;
-    
+        
   .logo{
-    padding-right: auto;
-  
+      
   img{
-    width: 92px;
-    height: 92px;
+    width: 50px;
+    height: 50px;
   }
   }
   }
 }
 
 .menu{
-      
+  
+  padding-right: 20px;
+
   &_list{
-  padding-right: 0;
-  gap: 25px;        
+    padding-right: 0;
+    gap: 25px;        
   }
 }
 }
@@ -192,7 +203,8 @@ function toggle(flag){
 @media (min-width:1000px) {
 
 .header {
-  padding-right: 71px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .menu{
@@ -208,16 +220,40 @@ function toggle(flag){
 }
 }
 
+@media(min-width: 1200px){
+
+  .header {
+    
+    &_inner{
+     
+    .logo{
+      
+    img{
+      width: 92px;
+      height: 92px;
+    }
+    }
+    }
+  }
+}
+
 @media(min-width: 1440px) {
 
-.menu{
+  .header {
     
-  a{
-    &:hover {
-    background-color: #FFFB47;
+    &_inner{
+      margin: auto; 
     }
-  }  
-}
+  }
+     
+  .menu{
+    
+    a{
+      &:hover {
+      background-color: #FFFB47;
+      }
+    }  
+  }
 }
 
 </style>
