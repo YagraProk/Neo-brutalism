@@ -11,7 +11,9 @@ html
   background-color: #FFF5EA;
 }
 
-#Service, #API, #Company{
+.cheap, 
+.available, 
+.worldwide{
   scroll-margin-top: 65px;
 }
 
@@ -43,7 +45,9 @@ p{
     font-size: 24px;
   }
 
-  #Service, #API, #Company{
+.cheap, 
+.available, 
+.worldwide{
     scroll-margin-top: 190px;
   }
 }

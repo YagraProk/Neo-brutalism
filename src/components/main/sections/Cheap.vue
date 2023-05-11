@@ -2,9 +2,9 @@
   <div class="cheap" id="Service">    
     <div class="cheap_wrapper">
       <div class="inner">
-        <img class="inner_dollar" src="@\assets\images\Dollar.svg" alt="Dollar">
-        <img class="inner_arrow" src="@\assets\images\Cheapimages\Cheapvector.svg" alt="Two side vector">     
-        <img class="inner_dollar" src="@\assets\images\Dollar.svg" alt="Dollar">
+        <img class="inner_dollar" src="@\assets\icons\dollar.svg" alt="Dollar">
+        <img class="inner_arrow" src="@\assets\icons\arrow.svg" alt="Two side arrow">     
+        <img class="inner_dollar" src="@\assets\icons\dollar.svg" alt="Dollar">
       </div>  
       <h2>0.5% only</h2>
     </div>

@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header_inner">
       <a href="/" class="logo">
-        <img src="@\assets\images\Logo.svg" alt="Logo">
+        <img src="@\components\main\ui\logo.svg" alt="Logo">
       </a>
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
@@ -19,8 +19,8 @@
 
 
 <script setup>
-import Button from '@/components/Button.vue'
-import Burger from '@/components/UI/Burger.vue'
+import Button from '@/components/main/ui/Button.vue'
+import Burger from '@/components/main/ui/Burger.vue'
 import {ref} from 'vue'
 import NAV_LIST from '@/static/nav.js' 
 

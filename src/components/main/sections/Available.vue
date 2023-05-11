@@ -10,11 +10,11 @@
             <a href="#countries">
                 <p class="text"> 
                 See supported countries
-                <img src="@\assets\images\Vector-arrow.svg" alt="Arrow to globe image">
+                <img src="@\assets\icons\smallarrow.svg" alt="Arrow to globe image">
                 </p>
             </a>
             </div>
-            <img class="available_img" src="@\assets\images\Globe.png" alt="Globe image" >
+            <img class="available_img" src="@\assets\images\globe.png" alt="Globe image" >
     </div>
 </template>
 

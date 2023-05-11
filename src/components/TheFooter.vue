@@ -2,7 +2,7 @@
   <footer class="footer" id="countries">
     <div class="footer_inner">
       <a href="/" class="logo">
-        <img src="@\assets\images\Logo.svg" alt="Logo">
+        <img src="@\components\main\ui\logo.svg" alt="Logo">
       </a>
       <nav class="menu">
         <ul class="menu_list">
@@ -31,13 +31,13 @@
       </nav>
       <div class="contacts">
         <a class="contacts_in" href="https://www.instagram.com/"> 
-            <img src="@\assets\images\instagram.svg" alt="Instagram link">
+            <img src="@\assets\icons\instagram.svg" alt="Instagram link">
         </a>
         <a class="contacts_lin" href="https://ru.linkedin.com/">
-            <img src="@\assets\images\linkedin.svg" alt="Linkedin link">
+            <img src="@\assets\icons\linkedin.svg" alt="Linkedin link">
         </a>
         <a class="contacts_twit" href="https://twitter.com/">
-            <img src="@\assets\images\twitter.svg" alt="Twitter link">
+            <img src="@\assets\icons\twitter.svg" alt="Twitter link">
         </a>
       </div>
     </div>

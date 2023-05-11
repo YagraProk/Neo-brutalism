@@ -6,8 +6,8 @@
       <span class="six">6</span>
       <span class="nine">9</span>
       <span class="three">3</span>
-      <img class="worldwide_dollar static" src="@\assets\images\Dollar.svg" alt="Time dollar" >
-      <img class="worldwide_dollar animate" src="@\assets\images\Dollar.svg" alt="Time dollar" >
+      <img class="worldwide_dollar static" src="@\assets\icons\dollar.svg" alt="Time dollar" >
+      <img class="worldwide_dollar animate" src="@\assets\icons\dollar.svg" alt="Time dollar" >
     </div>
     <div class="worldwide_content">  
       <h1 class="title">
@@ -24,7 +24,7 @@
 
 
 <script setup>
-import Button from '@/components/Button.vue'
+import Button from '@/components/main/ui/Button.vue'
 </script>
 
 
