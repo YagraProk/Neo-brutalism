@@ -1,12 +1,12 @@
 <template>
   <div class="app">
-    <TheMainPage/>
+    <default/>
   </div>  
 </template>
 
 
 <script setup>
-import TheMainPage from '@/page/TheMainPage.vue'
+import Default from '@/layouts/default.vue'
 </script>
 
 
