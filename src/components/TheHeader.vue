@@ -7,7 +7,9 @@
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
          <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
-          <a :href="link">{{title}}</a>
+          <router-link :to="link">{{title}}</router-link>
+          <!-- <router-link :to="{ name: 'home', hash: { link } }">{{title}}</router-link> -->
+          <!-- <a :href="link">{{title}}</a> -->
         </li>
         </ul>
       </nav>

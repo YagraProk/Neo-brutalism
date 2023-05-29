@@ -2,22 +2,17 @@
     <div class="container">
       <div class="container_inner">
         <h3 class="title">Welcome!</h3>
-        <input maxlength="25" size="40" name="Email" placeholder="Email">
-        <input type="password" maxlength="25" size="40" name="password" placeholder="Password">
+        <input v-model="email" maxlength="25" size="40" name="Email" placeholder="Email">
+        <input v-model="password" maxlength="25" size="40" name="password" placeholder="Password">
         <div class="item">
           <a href="#">Sign Up</a>
         </div> 
-          <div class="contacts">
-          <a href="https://ru.linkedin.com/"> 
-              <img src="@\assets\icons\linkedin.svg" alt="linkedin link">
-          </a>
-          <a href="https://www.google.com/?hl=RU">
-              <img src="@\assets\icons\google.svg" alt="google link">
-          </a>
-          <a href="https://ru-ru.facebook.com/">
-              <img src="@\assets\icons\facebook.svg" height="32px" width="32px" alt="facebook link">
-          </a>
-          </div>  
+          <ul class="contacts">
+            <li v-for="({link, icon}, index) in MODALNAV_LIST" :key="index">
+              <!-- <img :src="icon"> -->
+              <a :href ="link"><img :src="icon"></a>
+            </li>
+          </ul>  
       </div>
     </div>
     
@@ -25,7 +20,12 @@
   </template>
   
   <script setup>
-  
+  import { ref } from 'vue';
+  import MODALNAV_LIST from '@/static/modalnav.js' 
+
+    const email = ref(null)
+    const password = ref(null)
+    
   </script>
   
   <style lang="scss" scoped>

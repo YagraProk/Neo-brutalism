@@ -47,6 +47,7 @@
 
 
 <script setup>
+import FOOTERCONTACTS_LIST from '@/static/footercontacts.js'
 
 </script>
 

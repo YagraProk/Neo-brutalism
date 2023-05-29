@@ -15,7 +15,7 @@ html
 .available, 
 .worldwide{
   scroll-margin-top: 65px;
-}
+} /*Не работает при router-link 10 стр. TheHeader*/
 
  h1 {
   font-family: 'IBM Plex Mono', sans-serif;
@@ -49,7 +49,7 @@ p{
 .available, 
 .worldwide{
     scroll-margin-top: 190px;
-  }
+  }/*Не работает при router-link 10 стр. TheHeader*/
 }
 
 

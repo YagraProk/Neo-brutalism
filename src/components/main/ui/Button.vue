@@ -1,6 +1,5 @@
 <template>
-<!-- <a class="button" href="@\pages\getstarted\index.vue">Get started</a>  -->
-<router-link class="button" to="@\pages\getstarted\index.vue">Get started</router-link>
+<router-link class="button" to="getstarted">Get started</router-link>
 <slot/>
 </template>
 
