@@ -35,6 +35,8 @@
     border: 2px solid #000000;
     box-shadow: 4px 4px 0px #000000;
     margin: 50px 10px;
+    display: flex;
+    flex-direction: column;
     
     &_inner{
       padding: 25px 10px;
@@ -70,27 +72,22 @@
       background-color: #9747FF;
       transition-duration: 0.4s;
       box-shadow: black 2px 2px;
-      max-width: 81px;
+      max-width: 80px;
       color: #FFFFFF; 
       font-weight: 700;
-      text-decoration: none;
-      padding: 10px;
-      // display: block;
       cursor: pointer;
     }  
-    
-    // a{
-    //   color: #FFFFFF; 
-    //   font-weight: 700;
-    //   text-decoration: none;
-    //   padding: 10px;
-    //   display: block;
-    // }  
     }
   
     .contacts{
       display: flex;
       gap: 25px;
+      margin: 0;
+      padding: 20px 0;
+      
+    li{
+      list-style-type: none;
+    }
     
     a{
       cursor: default;
@@ -102,34 +99,30 @@
     }
     }
     }
-    }
+  }
   
   
   .item:hover{
     background-color: #FFFB47; 
-    
-    a{
-      color: black;
-    }
+    color: black;
   }
   
   @media(min-width:768px){
     .container{
+      
       &_inner{
+        margin-bottom: 50px;  
      
       input{
         height: 40px;
       }
-  
-      .item{
-        margin-bottom: 50px;
       }
-  
+
       .contacts{
         margin-bottom: 50px;
         border: 2px solid black;
         padding: 5px;
-      }
+        align-self: center;
       }
     }
   }
@@ -142,15 +135,16 @@
       box-shadow: 12px 12px 0px #000000;
   
       &_inner{
-     
+         
       input{
-        font-size: 20px;
+        font-size: 24px;
       }
     
       .item{
-        margin-bottom: 50px;
+        min-width: 150px;
       }
-  
+      }
+
       .contacts{
         padding: 10px;
       
@@ -159,7 +153,6 @@
       img{
         width: 32px;
         height: 32px;
-      }
       }
       }
       }
