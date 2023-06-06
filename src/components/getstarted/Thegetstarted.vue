@@ -1,20 +1,18 @@
 <template>
     <div class="container">
-      <div class="container_inner">
+      <form class="container_inner">
         <h3 class="title">Welcome!</h3>
         <input v-model="email" maxlength="25" size="40" name="Email" placeholder="Email">
         <input v-model="password" maxlength="25" size="40" name="password" placeholder="Password">
-        <div class="item">
-          <a href="#">Sign Up</a>
-        </div> 
+        <input type="submit" value="Sign Up" class="item">
+      </form> 
           <ul class="contacts">
-            <li v-for="({link, icon}, index) in MODALNAV_LIST" :key="index">
-              <!-- <img :src="icon"> -->
-              <a :href ="link"><img :src="icon"></a>
+            <li v-for="({link, icon, alt}, index) in MODALNAV_LIST" :key="index">
+              <a :href ="link"><img :src="icon" :alt="alt"></a>
             </li>
           </ul>  
       </div>
-    </div>
+    
     
     
   </template>
@@ -59,7 +57,7 @@
       max-width: 330px;
       border: 2px solid #000000;
     }
-  
+      
     ::-webkit-input-placeholder {
       padding: 10px;
       font-size: 16px;
@@ -72,14 +70,22 @@
       background-color: #9747FF;
       transition-duration: 0.4s;
       box-shadow: black 2px 2px;
-    
-    a{
+      max-width: 81px;
       color: #FFFFFF; 
       font-weight: 700;
       text-decoration: none;
       padding: 10px;
-      display: block;
+      // display: block;
+      cursor: pointer;
     }  
+    
+    // a{
+    //   color: #FFFFFF; 
+    //   font-weight: 700;
+    //   text-decoration: none;
+    //   padding: 10px;
+    //   display: block;
+    // }  
     }
   
     .contacts{
@@ -97,7 +103,7 @@
     }
     }
     }
-  }
+  
   
   .item:hover{
     background-color: #FFFB47; 
@@ -131,7 +137,7 @@
   @media(min-width:1200px){
   
     .container{
-      margin: 50px auto;
+      margin: 50px;
       border: 4px solid #000000;
       box-shadow: 12px 12px 0px #000000;
   

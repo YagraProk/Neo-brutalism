@@ -6,11 +6,9 @@
       </a>
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
-         <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
-          <router-link :to="link">{{title}}</router-link>
-          <!-- <router-link :to="{ name: 'home', hash: { link } }">{{title}}</router-link> -->
-          <!-- <a :href="link">{{title}}</a> -->
-        </li>
+          <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
+            <router-link :to="link">{{title}}</router-link>
+          </li>
         </ul>
       </nav>
       <div class="button"><a href="#"><Button/></a></div>
@@ -240,14 +238,7 @@ function toggle(flag){
 }
 
 @media(min-width: 1440px) {
-
-  .header {
-    
-    &_inner{
-      margin: auto; 
-    }
-  }
-     
+   
   .menu{
     
     a{

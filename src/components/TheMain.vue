@@ -19,7 +19,7 @@ import Worldwide from '@/components/main/sections/Worldwide.vue'
   <style scoped>
   .main{
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 10px;
   }
 

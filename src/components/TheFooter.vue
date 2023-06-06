@@ -6,38 +6,16 @@
       </a>
       <nav class="menu">
         <ul class="menu_list">
-          <li class="block1"><a class="head_submenu" href="#Service">Service</a>
-                    <ul class="submenu_list">
-			            <li class="item"><a href="#">Personal</a></li>
-			            <li class="item"><a href="#">Business</a></li>
-			            <li class="item"><a href="#">Enterprise</a></li>
+          <li class="block" v-for="({link, title, submenu}, index) in FOOTERNAV_LIST" :key="index"><router-link class="head_submenu" :to="link">{{ title }}</router-link>
+                    <ul class="submenu_list"> 
+			                <li class="item" v-for="({sublink, subtitle}, index) in submenu" :key="index"><a :href="sublink">{{ subtitle }}</a></li>
                     </ul>
-          </li>
-          <li class="block2"><a class="head_submenu" href="#API">API</a>
-                    <ul class="submenu_list">
-			            <li class="item"><a href="#">Developer contact</a></li>
-			            <li class="item"><a href="#">Documentation</a></li>
-			        </ul>
-          </li>
-          <li class="block3"><a class="head_submenu" href="#Company">Company</a>
-                    <ul class="submenu_list">
-			            <li class="item"><a href="#">About us</a></li>
-			            <li class="item"><a href="#">Careers</a></li>
-			            <li class="item"><a href="#">Investors</a></li>
-                      
-			        </ul>
           </li>
         </ul>
       </nav>
       <div class="contacts">
-        <a class="contacts_in" href="https://www.instagram.com/"> 
-            <img src="@\assets\icons\instagram.svg" alt="Instagram link">
-        </a>
-        <a class="contacts_lin" href="https://ru.linkedin.com/">
-            <img src="@\assets\icons\linkedin.svg" alt="Linkedin link">
-        </a>
-        <a class="contacts_twit" href="https://twitter.com/">
-            <img src="@\assets\icons\twitter.svg" alt="Twitter link">
+        <a class="contacts_item" v-for="({link, icon, alt}, index) in FOOTERCONTACTS_LIST" :key="index" :href="link"> 
+            <img :src="icon" :alt="alt">
         </a>
       </div>
     </div>
@@ -48,6 +26,7 @@
 
 <script setup>
 import FOOTERCONTACTS_LIST from '@/static/footercontacts.js'
+import FOOTERNAV_LIST from '@/static/footernav.js'
 
 </script>
 
@@ -104,8 +83,7 @@ import FOOTERCONTACTS_LIST from '@/static/footercontacts.js'
       flex-direction: column;
     
     .item{
-      // margin-bottom: 5px;
-          
+                
     a{
       font-family: 'IBM Plex Mono';
       font-weight: 400;
