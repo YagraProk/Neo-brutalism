@@ -84,6 +84,7 @@
       gap: 25px;
       margin: 0;
       padding: 20px 0;
+      justify-content: center;
       
     li{
       list-style-type: none;
