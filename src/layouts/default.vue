@@ -1,13 +1,13 @@
 <template>
     <div class="default-layout">
         <component :is="$route.meta">
-            <router-view/>
+            <router-view :key="$route.fullPath" />
         </component>    
     </div>
 </template>
 
 <script setup>
-    // import Main from '@/layouts/main.vue'
+   
 </script>
 
 <style scoped>

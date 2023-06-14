@@ -54,16 +54,18 @@
     }
   
     input{
-      height: 35px;
       width: 90%;
       max-width: 330px;
       border: 2px solid #000000;
+      padding: 10px;
+      line-height: 100%;
+      font-family: 'IBM Plex Mono';
     }
       
     ::-webkit-input-placeholder {
-      padding: 10px;
       font-size: 16px;
       line-height: 20px;
+      font-family: 'Inter';
     }
   
     .item{
@@ -72,7 +74,7 @@
       background-color: #9747FF;
       transition-duration: 0.4s;
       box-shadow: black 2px 2px;
-      max-width: 80px;
+      max-width: 200px;
       color: #FFFFFF; 
       font-weight: 700;
       cursor: pointer;
@@ -91,7 +93,7 @@
     }
     
     a{
-      cursor: default;
+      cursor: pointer;
   
     img{
       height: 24px;
@@ -108,15 +110,18 @@
     color: black;
   }
   
+  @media(min-width:480px){
+    .container_inner .item{
+      max-width: 330px;
+    }
+  }
+
   @media(min-width:768px){
     .container{
+      margin: 50px 20px;
       
       &_inner{
         margin-bottom: 50px;  
-     
-      input{
-        height: 40px;
-      }
       }
 
       .contacts{
@@ -138,11 +143,11 @@
       &_inner{
          
       input{
-        font-size: 24px;
+        font-size: 20px;
       }
-    
+
       .item{
-        min-width: 150px;
+        font-size: 24px;
       }
       }
 

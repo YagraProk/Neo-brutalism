@@ -11,7 +11,7 @@ const routes = [
     { 
         path: '/getstarted',
         name: 'getstarted',
-        component: () => import('../pages/getstarted/index.vue'),
+        component: () => import('../pages/registration/index.vue'),
         meta: start
     }
 ]

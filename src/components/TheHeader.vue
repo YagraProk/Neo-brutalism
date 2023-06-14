@@ -1,13 +1,15 @@
 <template>
   <header class="header">
     <div class="header_inner">
-      <a href="/" class="logo">
-        <img src="@\components\main\ui\logo.svg" alt="Logo">
-      </a>
+      <div class="logo">
+        <a href="/">
+          <img src="@\components\main\ui\logo.svg" alt="Logo">
+        </a>
+      </div>
       <nav class="menu">
         <ul :class="['menu_list', {'active': isActive}]">
-          <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index" @click="isActive = false">
-            <router-link :to="link">{{title}}</router-link>
+          <li class="item" v-for="({title, link}, index) in NAV_LIST" :key="index">
+            <router-link :to="link" @click="isActive = false">{{title}}</router-link>
           </li>
         </ul>
       </nav>
@@ -49,10 +51,13 @@ function toggle(flag){
     align-items: center;
     max-width: 1400px;
     box-sizing: border-box;
-   
+       
   .logo{
-     cursor: default;
   
+  a{
+    cursor: default;
+  }   
+    
   img{
     width: 40px;
     height: 40px;
@@ -80,7 +85,7 @@ function toggle(flag){
 	  height:100%;
 	  padding: 0;
     margin: 0;
-    background: #54BF58;
+    background: #FFFB47;
 	  transform: translateX(100%);
 	  transition: transform 0.3s; 
     justify-content: center;
@@ -130,7 +135,6 @@ function toggle(flag){
   background-color: #FFF5EA;
   
   &_inner{  
-    justify-content: end;
   
   .logo{
     flex-grow: 1;
@@ -144,7 +148,7 @@ function toggle(flag){
  
 .menu{
   padding-right: 10px;
- 
+  
   &_list{
     flex-direction: row;
     position: relative;

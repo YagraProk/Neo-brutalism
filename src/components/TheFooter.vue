@@ -6,7 +6,8 @@
       </a>
       <nav class="menu">
         <ul class="menu_list">
-          <li class="block" v-for="({link, title, submenu}, index) in FOOTERNAV_LIST" :key="index"><router-link class="head_submenu" :to="link">{{ title }}</router-link>
+          <li class="block" v-for="({link, title, submenu}, index) in FOOTERNAV_LIST" :key="index">
+            <router-link class="head_submenu" :to="link">{{ title }}</router-link>
                     <ul class="submenu_list"> 
 			                <li class="item" v-for="({sublink, subtitle}, index) in submenu" :key="index"><a :href="sublink">{{ subtitle }}</a></li>
                     </ul>
@@ -47,6 +48,7 @@ import FOOTERNAV_LIST from '@/static/footernav.js'
       gap: 40px;
       
     .logo{
+      cursor:default;
 
     img{
       width: 40px;
@@ -108,7 +110,7 @@ import FOOTERNAV_LIST from '@/static/footernav.js'
   a{
     text-decoration: none;
     list-style-type: none;
-    cursor:default;
+    cursor:pointer;
     color:#000000;
   }
 
