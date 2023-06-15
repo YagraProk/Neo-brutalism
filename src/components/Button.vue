@@ -25,6 +25,5 @@
 a:hover{
   background-color: #FFFB47; 
   color: black; 
-  
- }
+}
 </style>
