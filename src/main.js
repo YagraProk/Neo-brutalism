@@ -1,12 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
+import '@/index.css' 
 import App from './App.vue'
-import Pricing from './Pricing.vue'
-import Signup from './Signup.vue'
+import router from './router/index.js'
 
-
-createApp(App).mount('#app')
-
-createApp(Pricing).mount('#Pricing')
-
-createApp(Signup).mount('#Signup')
+createApp(App).use(router).mount('#app')
