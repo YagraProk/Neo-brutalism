@@ -4,6 +4,7 @@
 
 <template>
 <a class="item" href="Signup.html">Get started</a> 
+
 </template>
 
 <style scoped>
@@ -25,6 +26,5 @@
 a:hover{
   background-color: #FFFB47; 
   color: black; 
-  
 }
 </style>
