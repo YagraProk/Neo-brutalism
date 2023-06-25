@@ -1,7 +1,7 @@
 <template>
     <div class="default-layout">
         <component :is="$route.meta">
-            <router-view :key="$route.fullPath" />
+            <router-view :key="$route.fullPath"/>
         </component>    
     </div>
 </template>
