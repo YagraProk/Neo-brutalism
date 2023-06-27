@@ -4,7 +4,7 @@ import { fileURLToPath, URL } from "url";
 
 export default defineConfig({
   plugins: [vue()],
-  base: "/neo-brutalism/",
+  base: "",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
